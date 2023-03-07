@@ -1,0 +1,5 @@
+<div class="buttonContainer">
+    <input [(ngModel)]="newTask" type="text" class="searchToTask" placeholder="New tasks">
+    <button class="addButton" (click)="addTask()">+</button>
+    <task [tasks]="tasks"></task>
+</div>

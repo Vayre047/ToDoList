@@ -1,0 +1,9 @@
+<div class="taskContainer">
+    <ul *ngFor="let task of tasks; let index = index">
+        <li class="taskList" [ngClass]="task.status ? 'enabled' : 'disabled'">
+            {{task.name}}
+            <input type="checkbox" (click)="isChecked(task)">
+            <input type="button" (click)="deleteTask(index)" value="Delete">
+        </li>
+    </ul>
+</div>

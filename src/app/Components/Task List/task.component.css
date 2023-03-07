@@ -1,0 +1,31 @@
+.taskList{
+    list-style-type: none;
+    width: 25rem;
+    height: 8rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+ul{
+    position: relative;
+    right: 2%;
+}
+
+input[type=checkbox]{
+    width: 30px;
+    height: 30px;
+}
+
+.enabled{
+    text-decoration: line-through;
+    background-color: gray;
+}
+
+.disabled{
+    text-decoration: null;
+}
+
+
+/* input[type=button]{
+
+} */
