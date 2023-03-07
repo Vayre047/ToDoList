@@ -1,5 +1,6 @@
+<search-input [tasks]="tasks"></search-input>
 <div class="buttonContainer">
     <input [(ngModel)]="newTask" type="text" class="searchToTask" placeholder="New tasks">
     <button class="addButton" (click)="addTask()">+</button>
-    <task [tasks]="tasks"></task>
+    <task [tasks]="tasks" (newTasks)="updateTask($event)"></task>
 </div>

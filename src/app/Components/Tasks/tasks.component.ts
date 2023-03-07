@@ -24,4 +24,8 @@ export class TasksComponent implements OnInit{
     }
     this.taskCreated = true;
   }
+
+  updateTask(newTaskList: Task[]){
+    this.tasks = newTaskList;
+  }
 }
