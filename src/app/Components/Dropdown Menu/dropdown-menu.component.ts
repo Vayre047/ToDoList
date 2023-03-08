@@ -48,8 +48,4 @@ export class DropdownMenuComponent implements OnInit{
       }
       this.newTasks.emit(this.filterTasks);
   }
-
-  sendMessage(x: Task[]) {
-    console.log('tasks component ' + JSON.stringify(this.filterTasks));
-  }
 }
