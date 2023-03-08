@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { DropdownMenuComponent } from '../Dropdown Menu/dropdown-menu.component';
 import { Task } from '../Task Model/task.model';
 
 @Component({
@@ -6,26 +7,25 @@ import { Task } from '../Task Model/task.model';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
-export class TasksComponent implements OnInit{
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-  
+export class TasksComponent{
   newTask = '';
   tasks: Task[] = [];
   anyTasks: string = "No tasks";
   taskCreated: boolean = false;
+  filteredTasks: Task[] = [];
 
-  addTask(){
+  addTask(): void{
     if(this.newTask){
       const newTask = new Task(this.newTask, false, this.tasks.length + 1);
       this.tasks.push(newTask);
+      this.filteredTasks.push(newTask);
       this.newTask = '';
     }
     this.taskCreated = true;
   }
-
-  updateTask(newTaskList: Task[]){
-    this.tasks = newTaskList;
+  
+  updateTask($event: Task[]){
+    console.log('tasks component ' + JSON.stringify(this.tasks));
+    this.filteredTasks = $event;
   }
 }

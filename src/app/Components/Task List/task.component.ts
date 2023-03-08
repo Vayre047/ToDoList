@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Task } from '../Task Model/task.model';
 
 @Component({
@@ -6,10 +6,14 @@ import { Task } from '../Task Model/task.model';
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
-export class TaskComponent {
+export class TaskComponent implements OnInit{
   @Input() tasks: Task[] = [];
   @Output() newTasks = new EventEmitter<Task[]>();
-  
+
+  ngOnInit(){
+    this.sendMessage();
+  }
+
   deleteTask(index: any) {
     this.tasks.splice(index, 1);
     this.newTasks.emit(this.tasks);
@@ -17,6 +21,10 @@ export class TaskComponent {
 
   isChecked(task: Task){
     task.status = !task.status;
+    //this.newTasks.emit(this.tasks);
+  }
+
+  sendMessage(){
     this.newTasks.emit(this.tasks);
   }
 }
