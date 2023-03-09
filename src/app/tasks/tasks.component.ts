@@ -1,6 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { DropdownMenuComponent } from '../Dropdown Menu/dropdown-menu.component';
-import { Task } from '../Task Model/task.model';
+import { Component } from '@angular/core';
+import { Task } from '../taskModel/task.model';
 
 @Component({
   selector: 'tasks',

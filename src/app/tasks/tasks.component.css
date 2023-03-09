@@ -1,15 +1,15 @@
-.buttonContainer{
+.buttonContainer {
     position: relative;
     top: 3.5rem;
     left: 32%;
     display: flex;
 }
 
-.buttonConfiguration{
+.buttonConfiguration {
     padding: 2.5px 0 0 20px;
 }
 
-.searchToTask{
+.searchToTask {
     width: 20%;
     min-width: 200px;
     height: 2.5rem;
@@ -19,7 +19,7 @@
     background-color: #dbd7d7;
 }
 
-.addButton{
+.addButton {
     background-color: #008ae6;
     color: #fff;
     width: auto;

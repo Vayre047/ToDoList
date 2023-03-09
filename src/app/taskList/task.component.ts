@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Task } from '../Task Model/task.model';
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Task } from '../taskModel/task.model';
 
 @Component({
   selector: 'task',

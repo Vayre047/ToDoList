@@ -1,12 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Task } from '../Task Model/task.model';
+import { Task } from '../taskModel/task.model';
 
 @Component({
   selector: 'search-input',
   templateUrl: './search-input.component.html',
   styleUrls: ['./search-input.component.css']
 })
-export class SearchInputComponent {
+export class SearchInputComponent{
+  
   @Input() tasks: Task[] = [];
   @Output() newSearchedTasks = new EventEmitter<Task[]>();
   newSearchTask = "";

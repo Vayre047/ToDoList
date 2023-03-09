@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Task } from '../Task Model/task.model';
+import { Task } from '../taskModel/task.model';
 
 @Component({
   selector: 'dropdown-menu',
@@ -13,9 +13,7 @@ export class DropdownMenuComponent implements OnInit{
   @Output() newTasks = new EventEmitter<Task[]>();
   newStatus!: FormGroup;
 
-  constructor(private fb:FormBuilder){
-
-  }
+  constructor(private fb:FormBuilder){  }
 
   ngOnInit() {
     this.newStatus = this.fb.group({
