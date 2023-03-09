@@ -1,7 +1,9 @@
 .dropdownPosition{
     position: relative;
-    padding: 0 0 0 50rem;
+    bottom: 20px;
+    padding: 0 0 0 60rem;
     text-align: center;
+    width: 500px;
 }
 
 button{
@@ -11,7 +13,7 @@ button{
     background-color: #008ae6;
     color: #fff;
     width: auto;
-    max-width: 100%;
+    max-width: 100px;
     min-width: 100px;
     height: 40px;
     font-family: Arial, sans-serif;

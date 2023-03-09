@@ -25,7 +25,6 @@ export class TasksComponent{
   }
   
   updateTask($event: Task[]){
-    console.log('tasks component ' + JSON.stringify(this.tasks));
     this.filteredTasks = $event;
   }
 }

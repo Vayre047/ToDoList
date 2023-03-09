@@ -2,6 +2,8 @@
 <dropdown-menu [tasks]="tasks" (newTasks)="updateTask($event)"></dropdown-menu>
 <div class="buttonContainer">
     <input [(ngModel)]="newTask" type="text" class="searchToTask" placeholder="New tasks">
-    <button class="addButton" (click)="addTask()">+</button>
+    <div class="buttonConfiguration">
+        <button class="addButton" (click)="addTask()">+</button>
+    </div>
     <task [tasks]="filteredTasks" (newTasks)="updateTask($event)"></task>
 </div>
